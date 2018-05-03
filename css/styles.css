@@ -1,0 +1,37 @@
+/* This style sheet is written by Christopher Lee;
+Please contact me for any usuage before borrowing any code
+Thank you!
+*/
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.header-image {
+  background-image: url("/images/header_logo.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Stackoverflow preview fix, please ignore */
+.navbar-nav {
+  flex-direction: row;
+}
+
+.nav-link {
+  padding-right: .5rem !important;
+  padding-left: .5rem !important;
+}
+
+/* Fixes dropdown menus placed on the right side */
+.ml-auto .dropdown-menu {
+  left: auto !important;
+  right: 0px;
+}
+
+.navbar {
+  background: white !important;
+}
