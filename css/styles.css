@@ -8,6 +8,22 @@ body, html {
     margin: 0;
 }
 
+.hero {
+  padding-top: 15px;
+}
+
+.hero-text {
+  /* border-style: solid;
+  border-width: 1px;
+  border-color: #5E2689; */
+  color: #5E2689;
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding-top: 50px;
+}
+
+
 .header-image {
   background-image: url("/images/header_logo.png");
   height: 100%;
@@ -24,6 +40,7 @@ body, html {
 .nav-link {
   padding-right: .5rem !important;
   padding-left: .5rem !important;
+  color: #fff !important;
 }
 
 /* Fixes dropdown menus placed on the right side */
@@ -32,6 +49,22 @@ body, html {
   right: 0px;
 }
 
-.navbar {
-  background: white !important;
+.purp-background {
+  background: #5E2689;
+}
+
+nav {
+  background: rgba(94, 38, 137, 0.85);
+}
+
+nav a:link {
+  color: #fff;
+}
+
+nav a:visited {
+  color: #fff;
+}
+
+.footer-style {
+  background-color: #5e5e5e;
 }
