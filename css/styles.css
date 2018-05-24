@@ -6,51 +6,7 @@ Thank you!
 body, html {
     height: 100%;
     margin: 0;
-}
-
-.hero {
-  padding-top: 15px;
-}
-
-.hero-text {
-  /* border-style: solid;
-  border-width: 1px;
-  border-color: #5E2689; */
-  color: #5E2689;
-  font-size: 22px;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  padding-top: 50px;
-}
-
-
-.header-image {
-  background-image: url("/images/header_logo.png");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-/* Stackoverflow preview fix, please ignore */
-.navbar-nav {
-  flex-direction: row;
-}
-
-.nav-link {
-  padding-right: .5rem !important;
-  padding-left: .5rem !important;
-  color: #fff !important;
-}
-
-/* Fixes dropdown menus placed on the right side */
-.ml-auto .dropdown-menu {
-  left: auto !important;
-  right: 0px;
-}
-
-.purp-background {
-  background: #5E2689;
+  font-size: 1rem;
 }
 
 nav {
@@ -65,6 +21,88 @@ nav a:visited {
   color: #fff;
 }
 
+.hero {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.hero-text {
+  /* border-style: solid;
+  border-width: 1px;
+  border-color: #5E2689; */
+  color: #5E2689;
+  /* font-size: 1.5em; */
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 960px) {
+  div.hero-text {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  div.hero-text {
+    font-size: 18px;
+  }
+}
+
+.label {
+  width: 300px;
+  height: 60px;
+  padding-top: 9px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+#middle {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#tegnum {
+  margin-top: 10px;
+}
+
+#yauhaas146 {
+
+}
+
 .footer-style {
+  margin-top: 40px;
   background-color: #5e5e5e;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8;
+}
+
+.quote {
+  color: #860710 !important;
+  font-size: 24px;
+  text-align: center;
+}
+
+.border-image {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #5E2689;
+  float: right;
+}
+
+.purp-background {
+  /* background: #5E2689; */
+  background: rgba(94, 38, 137, 0.85);
+}
+
+.gray-background {
+  background: rgba(216, 216, 216, 1);
 }
