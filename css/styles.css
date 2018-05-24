@@ -6,8 +6,9 @@ Thank you!
 body, html {
     height: 100%;
     margin: 0;
-  font-size: 1rem;
+    font-size: 1rem;
 }
+
 
 nav {
   background: rgba(94, 38, 137, 0.85);
@@ -15,6 +16,14 @@ nav {
 
 nav a:link {
   color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+nav a:hover {
+  text-decoration: none !important;
+  color: #E0E0E0 !important;
 }
 
 nav a:visited {
@@ -22,16 +31,12 @@ nav a:visited {
 }
 
 .hero {
-  padding-top: 15px;
+  padding-top: 75px;
   padding-bottom: 15px;
 }
 
 .hero-text {
-  /* border-style: solid;
-  border-width: 1px;
-  border-color: #5E2689; */
   color: #5E2689;
-  /* font-size: 1.5em; */
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   padding-top: 50px;
@@ -39,27 +44,18 @@ nav a:visited {
   margin-right: auto;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1200px) {
   div.hero-text {
     font-size: 22px;
   }
 }
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 1199px) {
   div.hero-text {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
-.label {
-  width: 300px;
-  height: 60px;
-  padding-top: 9px;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5em;
-  color: #fff;
-}
 
 #middle {
   margin-top: 10px;
@@ -67,12 +63,10 @@ nav a:visited {
   padding-bottom: 10px;
 }
 
-#tegnum {
+.rowspace {
   margin-top: 10px;
-}
-
-#yauhaas146 {
-
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .footer-style {
@@ -82,19 +76,42 @@ nav a:visited {
 
 p {
   font-family: 'Montserrat', sans-serif;
-  font-size: .8;
+  font-size: 1.2em;
 }
 
-.quote {
-  color: #860710 !important;
+.hd1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8em;
+  color: #5E2689;
+}
+
+.txtq {
+  margin-top: 10px;
+  text-align: center;
+  color: #860710;
   font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.claimer {
+  font-family: sans-serif;
+  font-size: .8rem;
   text-align: center;
 }
 
+/*
 .border-image {
   border-style: solid;
   border-width: 1px;
   border-color: #5E2689;
+  float: right;
+} */
+
+.text-align-left {
+  text-align: left;
+}
+
+.f-right {
   float: right;
 }
 
