@@ -1,22 +1,63 @@
 
+$(function()
+{
+    function after_form_submitted(data)
+    {
+        if(data.result == 'success')
+        {
+            $('form#reused_form').hide();
+            $('#success_message').show();
+            $('#error_message').hide();
+        }
+        else
+        {
+            $('#error_message').append('<ul></ul>');
 
-// <nav class="navbar sticky-top navbar-light bg-light" id="stickyNav">
-//   <a class="navbar-brand" href="#">Navbar</a>
-//   <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-//     <span class="navbar-toggler-icon"></span>
-//   </button> -->
-//
-//   <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-//     <ul class="navbar-nav ml-auto">
-//       <li class="nav-item active">
-//         <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-//       </li>
-//       <li class="nav-item">
-//         <a class="nav-link" href="#">Visit Us</a>
-//       </li>
-//     </ul>
-//     <!-- <form class="form-inline my-2 my-lg-0">
-//       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-//       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-//     </form> -->
-// </nav>
+            jQuery.each(data.errors,function(key,val)
+            {
+                $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+            });
+            $('#success_message').hide();
+            $('#error_message').show();
+
+            //reverse the response on the button
+            $('button[type="button"]', $form).each(function()
+            {
+                $btn = $(this);
+                label = $btn.prop('orig_label');
+                if(label)
+                {
+                    $btn.prop('type','submit' );
+                    $btn.text(label);
+                    $btn.prop('orig_label','');
+                }
+            });
+
+        }//else
+    }
+
+	$('#reused_form').submit(function(e)
+      {
+        e.preventDefault();
+
+        $form = $(this);
+        //show some response on the button
+        $('button[type="submit"]', $form).each(function()
+        {
+            $btn = $(this);
+            $btn.prop('type','button' );
+            $btn.prop('orig_label',$btn.text());
+            $btn.text('Sending ...');
+        });
+
+
+                    $.ajax({
+                type: "POST",
+                url: 'handler.php',
+                data: $form.serialize(),
+                success: after_form_submitted,
+                dataType: 'json'
+            });
+
+      });
+});
